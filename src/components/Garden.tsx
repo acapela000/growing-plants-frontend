@@ -4,7 +4,6 @@ import { Base } from "./Base";
 import { Suspense } from "react";
 import { Physics } from "@react-three/rapier";
 import LightSource from "./LightSource";
-import { Bvh } from "@react-three/drei";
 
 
 export function Garden() {
@@ -12,14 +11,6 @@ export function Garden() {
         <div className="h-screen">
             <Canvas
                 id="my-canvas"
-                gl={{
-                    powerPreference: "high-performance",
-                    alpha: false,
-                    antialias: false,
-                    stencil: false,
-                    depth: false
-                }}
-                dpr={1}
                 shadows
                 camera={{
                     fov: 45,
@@ -30,12 +21,9 @@ export function Garden() {
             >
                 <color attach="background" args={["#b1dbfc"]} />
                 <fog attach="fog" args={["#f2d830", 35, 60]} />
-                <Suspense fallback="null">
-                    <Physics debug>
-                        <Bvh>
-                            {/* <ForestModel /> */}
-                            <Base/>
-                        </Bvh>
+                <Suspense>
+                    <Physics>
+                        <Base />
                         <LightSource />
                     </Physics>
                 </Suspense>
