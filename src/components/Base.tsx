@@ -16,11 +16,11 @@ export function Base() {
 
             {/* Brand */}
             <Octopus position={[-4, -1.3, -4]} scale={[.04, .04, .04]} />
-            
+
             {/* Stage */}
-            <group position-y={-5} >
+            <group position-y={-6.5} >
                 <RigidBody colliders={false} type="fixed" position-y={0} >
-                    <Land scale={[15, 5, 15]} />
+                    <Land scale={[25, 7, 25]} />
                 </RigidBody>
             </group>
         </>

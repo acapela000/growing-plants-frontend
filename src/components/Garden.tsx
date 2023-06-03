@@ -4,21 +4,18 @@ import { Base } from "./Base";
 import { Suspense } from "react";
 import { Physics } from "@react-three/rapier";
 import LightSource from "./LightSource";
+import { Loader } from "@react-three/drei";
+import { Overlay } from "./Overlay";
 
 
 export function Garden() {
     return (
-        <div className="h-screen">
-            <Canvas
-                id="my-canvas"
-                shadows
-                camera={{
-                    fov: 45,
+        <>
+            <Canvas id="my-canvas" shadows camera={{
+                    fov: 40,
                     near: 0.1,
                     far: 100,
-                    position: [80, 4.8, 28]
-                }}
-            >
+                    position: [80, 4.8, 28]}}>
                 <color attach="background" args={["#b1dbfc"]} />
                 <fog attach="fog" args={["#f2d830", 35, 60]} />
                 <Suspense>
@@ -28,6 +25,9 @@ export function Garden() {
                     </Physics>
                 </Suspense>
             </Canvas>
-        </div>
+
+            <Loader />
+            <Overlay />
+        </>
     )
 }
