@@ -6,7 +6,7 @@ export function Land(props:any) {
   return (
     <group {...props} dispose={null}>
       <mesh geometry={nodes['Island01_Cylinder-Mesh'].geometry} material={materials.Dirt} />
-      <mesh geometry={nodes['Island01_Cylinder-Mesh_1'].geometry} material={materials.Grass} receiveShadow castShadow />
+      <mesh geometry={nodes['Island01_Cylinder-Mesh_1'].geometry} material={materials.Grass} receiveShadow />
     </group>
   )
 }

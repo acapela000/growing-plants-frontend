@@ -1,7 +1,8 @@
 import { RigidBody} from "@react-three/rapier";
 
-import { TreeOne } from "./Models/Tree-1";
-import { TreeTwo } from "./Models/Tree-2";
+import { TreeOne } from "./Models/Trees/Tree-1";
+import { TreeTwo } from "./Models/Trees/Tree-2";
+import { TreeThree } from "./Models/Trees/Tree-3";
 
 
 type TreesProps = {
@@ -11,12 +12,12 @@ type TreesProps = {
 export function Trees(props: TreesProps) {
     return (
         <>
-            <RigidBody
-                colliders={false}
-                scale={[2, 2, 2]}>
+            <RigidBody colliders={false}>
                 <group>
-                    <TreeOne />
-                    {/* <TreeTwo /> */}
+                    <TreeOne scale={[2,2,2]} position={[1, -.5, -2]} rotation-y={Math.PI} />
+                    <TreeOne scale={[2,2,2]} position={[.75, -.5, -1.6]} rotation-y={Math.PI-2} />
+                    <TreeTwo scale={[1,1,1]} position={[5, .4, -1.6]} rotation-y={Math.PI} />
+                    <TreeThree scale={[1,1,1]} position={[-1.6, .5, 5]} rotation-y={Math.PI} />
                 </group>
             </RigidBody>
         </>

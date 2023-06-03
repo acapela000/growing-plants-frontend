@@ -10,8 +10,8 @@ export function TreeTwo(props:any) {
   const { nodes, materials } = useGLTF('/models/tree-2/model.glb')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes['Node-Mesh'].geometry} material={materials.mat20} />
-      <mesh geometry={nodes['Node-Mesh_1'].geometry} material={materials.mat9} />
+      <mesh geometry={nodes['Node-Mesh'].geometry} material={materials.mat20} receiveShadow castShadow  />
+      <mesh geometry={nodes['Node-Mesh_1'].geometry} material={materials.mat9} receiveShadow castShadow  />
     </group>
   );
 }
