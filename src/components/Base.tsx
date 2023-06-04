@@ -5,6 +5,7 @@ import { Land } from "./Models/Land";
 import { Trees } from "./Trees";
 import { Octopus } from "./Models/Octopus";
 import { House } from "./Models/House";
+import { TreeFour } from "./Models/Trees/Tree-4";
 
 
 export function Base() {
@@ -16,7 +17,7 @@ export function Base() {
 
             {/* Brand */}
             <Octopus position={[1.5, -1.3, 9]} scale={[.04, .04, .04]} />
-            
+
             {/* House */}
             <House position={[-1.5, -1.2, 8.5]} scale={[1, 1, 1]} rotation-y={Math.PI * 2.3} />
 
