@@ -4,6 +4,7 @@ import { RigidBody } from "@react-three/rapier";
 import { Land } from "./Models/Land";
 import { Trees } from "./Trees";
 import { Octopus } from "./Models/Octopus";
+import { House } from "./Models/House";
 
 
 export function Base() {
@@ -11,11 +12,13 @@ export function Base() {
         <>
             <OrbitControls autoRotate maxPolarAngle={Math.PI / 2.18} autoRotateSpeed={0.3} maxDistance={33} minDistance={8} />
 
-            {/* Threes */}
-            <Trees amount={10} />
+            <Trees seeds={300800} />
 
             {/* Brand */}
-            <Octopus position={[-4, -1.3, -4]} scale={[.04, .04, .04]} />
+            <Octopus position={[1.5, -1.3, 9]} scale={[.04, .04, .04]} />
+            
+            {/* House */}
+            <House position={[-1.5, -1.2, 8.5]} scale={[1, 1, 1]} rotation-y={Math.PI * 2.3} />
 
             {/* Stage */}
             <group position-y={-6.5} >
