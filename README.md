@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Installation
+
+```bash
+npm i
+```
 
 ## Getting Started
 
-First, run the development server:
+To begin, execute the following command to start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Description of `Gardener` 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Concepts
 
-## Learn More
++ A 3D web application designed to monitor energy consumption within households.
 
-To learn more about Next.js, take a look at the following resources:
++ Visualize the current energy usage and provide users with better control over their energy consumption.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
++ Incorporate gamification elements to encourage users to adopt smarter energy consumption habits, resulting in both energy and cost savings.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
++ An eco-friendly application designed to alleviate tension and reduce stress every time consumers check and pay their bills.
 
-## Deploy on Vercel
+### Explanation of the rule
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The "Remaining water" status indicates:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
++ `High`: No households are currently utilizing the energy.
+
++ `Medium`: Some households are consuming the energy, but if the user decides to utilize it, they will receive fewer rewards for their garden.
+
++ `Low`: A significant number of households are consuming the energy, and the user should refrain from using it during this time.
+
+The amount of seeds a gardener can obtain when the consumer uses energy while the "Remaining water" status is:
+- `High`: +10 seeds for their garden.
+- `Medium`: +5 seeds for their garden.
+- `Low`: -1 seeds for their garden.
+
+### Explanation of symbols
+
+`Gardener` <img src="/public/house.png" width="50"> = `Household`
+
+`Water` = `Energy`
++ `High` <img src="/public/level/high-water.png" width="50">
++ `Medium` <img src="/public/level/medium-water.png" width="50">
++ `Low` <img src="/public/level/low-water.png" width="50">
+
+`Tree` <img src="/public/tree.png" width="30"> = `Quantity of seeds` 
+
+`Seed` <img src="/public/seed.png" width="30"> = `Individual point`
+
+### Conversion of seeds/trees to yen
+
++ 1 point = 1 seed
++ 1000 seeds = 1 tree
++ 1 tree = 10 yen
+
+## Exchanging trees/seeds to pay the water/electricity/gas bills
+
+Every month, the gardeners gather seeds and grow as many trees as possible. They can then exchange these seeds or trees for real money, which will be deposited into the consumer's account and can be used to pay their energy bills.
+
