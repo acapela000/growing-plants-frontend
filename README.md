@@ -1,3 +1,5 @@
+<img src="/demo/landing-page.png">
+
 ## Installation
 
 ```bash
@@ -14,7 +16,10 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Description of `Gardener` 
+## Description of `Gardener`
+
+[<img src="/demo/landing-page.png" width="50%"> 
+Click to watch the demo!](https://youtu.be/5s_dVDi-4Kc)
 
 ### Concepts
 
@@ -63,4 +68,5 @@ The amount of seeds a gardener can obtain when the consumer uses energy while th
 ## Exchanging trees/seeds to pay the water/electricity/gas bills
 
 Every month, the gardeners gather seeds and grow as many trees as possible. They can then exchange these seeds or trees for real money, which will be deposited into the consumer's account and can be used to pay their energy bills.
+
 
