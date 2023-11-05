@@ -4,10 +4,10 @@ import React, { useRef } from "react"
 
 export default function LightSource() {
     const sunTexture = useTexture("/lensflare0.png")
-    const sunLight = useRef()
+    const sunLight = useRef("");
 
     useFrame(({ clock }) => {
-        sunLight.current.rotation.z += 0.003
+        sunLight.current += 0.003
     })
     return (
         <>
